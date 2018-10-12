@@ -5,7 +5,7 @@ from mafan import simplify
 
 MIN_SUP = 100
 MIN_PERCENT = 100
-LANGUAGE = 'en'
+LANGUAGE = 'PT'
 
 def StopWordChecking(name, stopwords):
     tokens = name.lower().split()
@@ -39,7 +39,7 @@ def Load(filename, stopwords, output_filename):
             continue
         tokens = line.strip().split('\t')
         valid = False
-        for token in tokens[2:]:
+        for token in tokens[3:]:
             support = int(token.split(':')[-2])
             percentage = float(token.split(':')[-1][:-1])
             if (percentage >= MIN_PERCENT) or (support >= MIN_SUP):
