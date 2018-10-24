@@ -44,6 +44,7 @@ Ubuntu:
 * g++ 4.8 `$ sudo apt-get install g++-4.8`
 * Java 8 `$ sudo apt-get install openjdk-8-jdk`
 * curl `$ sudo apt-get install curl`
+* ant `$ sudo apt-get install ant`
 
 MacOS:
 
@@ -95,7 +96,10 @@ In fact, our tokenizer supports many different languages, including Arabics (AR)
 TOKENIZER="-cp .:tools/tokenizer/lib/*:tools/tokenizer/resources/:tools/tokenizer/build/ Tokenizer -l EN"
 ```
 
-We also provide a default tokenizer together with a dummy POS tagger in the ```tools/tokenizer```.
+We also provide a default tokenizer together with a dummy POS tagger in the ```tools/tokenizer```. Build it from ```tools/tokenizer```:
+
+`ant clean-build`
+
 It uses the StandardTokenizer in Lucene, and always assign a tag ```UNKNOWN``` to each token.
 To enable this feature, please add the ```-l OTHER"``` to the ```TOKENIZER``` command in the bash script ```auto_phrase.sh```.
 ```
