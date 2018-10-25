@@ -53,11 +53,7 @@ MacOS:
 
 ## Default Run
 
-The default run will download an English corpus from the server of our data
-mining group and run AutoPhrase to get 3 ranked lists of phrases as well as 2 segmentation model files under the
-```MODEL``` (i.e., ```models/DBLP```) directory. 
-
-When using other languages, put the corresponding text corpus in the file ```data/DBLP.txt```.
+In order to run you need to put the corresponding text corpus in the file ```data/DBLP.txt```.
 
 #### Phrase Mining Step
 ```
